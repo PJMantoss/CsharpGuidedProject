@@ -10,6 +10,8 @@ int[] loganScores = new int[] { 90, 95, 87, 88, 96 };
 // Student names
 string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
 
+int[] studentScores = new int[10];
+
 foreach (string name in studentNames)
 {
     if (name == "Sophia")
