@@ -15,9 +15,9 @@ int[] studentScores = new int[10];
 foreach (string name in studentNames)
 {
     string currentStudent = name;
-    
+
     if (currentStudent == "Sophia")
-    {
+    /*{
         int sophiaSum = 0;
 
         decimal sophiaScore;
@@ -31,7 +31,14 @@ foreach (string name in studentNames)
 
         Console.WriteLine("Student\t\tGrade\n");
         Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
-    }
+    }*/
+    studentScores = sophiaScores;
+    else if (currentStudent == "Andrew")
+    studentScores = andrewScores;
+    else if (currentStudent == "Emma")
+    studentScores = emmaScores;
+    else if (currentStudent == "Logan")
+    studentScores = loganScores;
 
 }
 
