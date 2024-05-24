@@ -24,22 +24,20 @@ foreach (string name in studentNames)
         studentScores = emmaScores;
     else if (currentStudent == "Logan")
         studentScores = loganScores;
+
+        // initialize/reset the sum of scored assignments
+    int sumAssignmentScores = 0;
+
+    // initialize/reset the calculated average of exam + extra credit scores
+    decimal currentStudentGrade = 0;
+
+    foreach (int score in studentScores)
     {
-        int sumAssignmentScores = 0;
-
-        decimal currentStudentGrade = 0;
-
-        foreach (int score in sophiaScores)
-        {
-            // add the exam score to the sum
-            sophiaSum += score;
-        }
-
-        sophiaScore = (decimal)sophiaSum / currentAssignments;
-
-        Console.WriteLine("Student\t\tGrade\n");
-        Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
+        // add the exam score to the sum
+        sumAssignmentScores += score;
     }
+
+    currentStudentGrade = (decimal)(sumAssignmentScores) / currentAssignments;
 
 }
 
