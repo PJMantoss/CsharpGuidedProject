@@ -15,7 +15,8 @@ int[] studentScores = new int[10];
 foreach (string name in studentNames)
 {
     string currentStudent = name;
-    if (name == "Sophia")
+    
+    if (currentStudent == "Sophia")
     {
         int sophiaSum = 0;
 
