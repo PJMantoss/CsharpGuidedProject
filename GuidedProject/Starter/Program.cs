@@ -12,6 +12,9 @@ string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
 
 int[] studentScores = new int[10];
 
+//Write the Report Header to the Console
+Console.WriteLine("Student\t\tGrade\n");
+ 
 foreach (string name in studentNames)
 {
     string currentStudent = name;
@@ -38,7 +41,8 @@ foreach (string name in studentNames)
     }
 
     currentStudentGrade = (decimal)(sumAssignmentScores) / currentAssignments;
-
+    
+    Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t?");
 }
 
 
