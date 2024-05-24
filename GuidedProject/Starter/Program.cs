@@ -17,10 +17,18 @@ foreach (string name in studentNames)
     string currentStudent = name;
 
     if (currentStudent == "Sophia")
-    /*{
-        int sophiaSum = 0;
+        studentScores = sophiaScores;
+    else if (currentStudent == "Andrew")
+        studentScores = andrewScores;
+    else if (currentStudent == "Emma")
+        studentScores = emmaScores;
+    else if (currentStudent == "Logan")
+        studentScores = loganScores;
+    {
+        int sumAssignmentScores = 0;
 
-        decimal sophiaScore;
+        decimal currentStudentGrade = 0;
+
         foreach (int score in sophiaScores)
         {
             // add the exam score to the sum
@@ -31,14 +39,7 @@ foreach (string name in studentNames)
 
         Console.WriteLine("Student\t\tGrade\n");
         Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
-    }*/
-    studentScores = sophiaScores;
-    else if (currentStudent == "Andrew")
-    studentScores = andrewScores;
-    else if (currentStudent == "Emma")
-    studentScores = emmaScores;
-    else if (currentStudent == "Logan")
-    studentScores = loganScores;
+    }
 
 }
 
