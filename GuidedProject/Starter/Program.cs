@@ -35,13 +35,25 @@ foreach (string name in studentNames)
     // initialize/reset the calculated average of exam + extra credit scores
     decimal currentStudentGrade = 0;
 
+    // initialize/reset a counter for the number of assignment 
+    int gradedAssignments = 0;
+
     foreach (int score in studentScores)
     {
+        // increment the assignment counter
+        gradedAssignments += 1;
         // add the exam score to the sum
-        sumAssignmentScores += score;
+        if (gradedAssignments <= examAssignments)
+            // add the exam score to the sum
+            sumAssignmentScores += score;
+
+        else
+            // add the extra credit points to the sum - bonus points equal to 10% of an exam score
+            sumAssignmentScores += score / 10;
     }
 
-    currentStudentGrade = (decimal)(sumAssignmentScores) / currentAssignments;
+    currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
+
     if (currentStudentGrade >= 97)
         currentStudentLetterGrade = "A+";
 
